@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="309.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="291.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="478.0" minHeight="10.0" prefHeight="434.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="453.0" minHeight="6.0" prefHeight="92.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="333.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextArea fx:id="textArea" onKeyPressed="#onEnter" prefHeight="72.0" prefWidth="450.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <SplitPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+         <items>
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" maxHeight="Infinity" maxWidth="450.0" minWidth="450.0" pannable="true" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="vbox" minHeight="423.0" minWidth="433.0" prefWidth="433.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="76.0" prefWidth="381.0" text="привет приветприветприветприветприветприветприветприветприветприветпривет" wrapText="true" />
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+      <Label fx:id="viewCount" prefHeight="17.0" prefWidth="231.0" text="Viewers: " GridPane.rowIndex="2">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+   </children>
+</GridPane>
